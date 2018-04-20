@@ -86,7 +86,7 @@
             echo "<input type='hidden' name='id[]' value='".$produto['id']."'>";
 						echo "<tr><input type='hidden' name='nome[]' value='".$produto['nome']."'><td>".$produto['nome']."</td>";
 						echo "<td><input type='hidden' name='qtd[]' value='".$produto['qtd']."'>".$produto['qtd']."</td>";
-						echo "<td><input type='hidden' name='preco[]' value'".$produto['preco']."'>R$ ".$produto['preco']."</td>";
+						echo "<td><input type='hidden' name='preco[]' value='".$produto['preco']."'>R$ ".$produto['preco']."</td>";
 						echo "<td><input type='number' name='qtd_compra[]' min='0'></tr>";
 					}
 

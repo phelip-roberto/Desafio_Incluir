@@ -91,18 +91,18 @@
 								echo "<tr><td><input type='hidden' name='id[]' value='".$_POST['id'][$i]."'>".$_POST['id'][$i]."</td>"; // id
 								$quantidade = $_POST['qtd'][$i];
 								$novaQtd = $quantidade - $quantidadeCompra;
-								echo "<input type='hidden' name='novaQtd[]' value'".$novaQtd."'>";
+								echo "<input type='hidden' name='novaQtd[]' value='".$novaQtd."'>";
 								echo "<td>".$_POST['nome'][$i]."</td>";
 						    	echo "<td>".$quantidadeCompra."</td>";
 						    	$preco = (float)$_POST['preco'][$i];
 						    	$subTotal = (float)($preco * $quantidadeCompra);
-						    	echo "<td>".$subTotal."</td></tr>";
+						    	echo "<td>R$ ".$subTotal."</td></tr>";
 							}
 							$precoTotal = $precoTotal + $subTotal;
 					 		$i++;
 						}	
 					?>
-					<tr><td colspan="3" class="text-right">Preço Total:</td><td colspan="1"><?php echo $precoTotal; ?></td></tr>
+					<tr><td colspan="3" class="text-right">Preço Total:</td><td colspan="1">R$ <?php echo $precoTotal; ?></td></tr>
 					<tr><td colspan="4"><a href="../../home.php" class="btn btn-warning">Voltar</a>  <button type="submit" name="Confirmar" class="btn btn-success">Confirmar</button></td></tr>
 				</form>
 			</tbody>
